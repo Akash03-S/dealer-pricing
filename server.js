@@ -1,6 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 8080;
+
+app.use(cors());
 
 const dealers = {
     "1": [{"dealer": "Best Dealership", "price": "$3.20"}, {"dealer": "Top Choice Auto", "price": "$3.40"}],
