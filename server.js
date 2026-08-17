@@ -11,6 +11,11 @@ const dealers = {
     "3": [{"dealer": "Discount Wheels", "price": "$3.90"}, {"dealer": "Value Cars", "price": "$4.10"}]
 };
 
+// Route to get all dealers' prices
+app.get('/dealers', (req, res) => {
+    res.json(dealers);
+});
+
 app.get('/dealers/:id', (req, res) => {
     const productId = req.params.id;
     const productDealers = dealers[productId];
